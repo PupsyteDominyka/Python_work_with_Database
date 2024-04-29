@@ -18,12 +18,12 @@ try:
     print("Connection successful!")
 
     cursor = connection.cursor()
-    query = "SELECT * FROM actor"  # Replace with your desired query
+    query = "SELECT * FROM actor"
     cursor.execute(query)
     results = cursor.fetchall()
 
     for row in results:
-        print(f"ID: {row[0]}, Name: {row[1]}, Surname: {row[2]} ")  # Access column data by index
+        print(f"ID: {row[0]}, Name: {row[1]}, Surname: {row[2]} ")
 
 except mysql.connector.Error as err:
     print(f"Connection error: {err}")
